@@ -1,0 +1,6 @@
+git init # creates a repository.
+git status # the status of the staging area.
+git log # compare commits.
+git clone # to clone a repo from another machine.
+git add <file> # to add files to the staging area.
+git reset <file>  # to remove a file from the staging area.

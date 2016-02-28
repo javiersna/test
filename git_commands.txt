@@ -1,11 +1,13 @@
 git init # creates a repository.
 git status # the status of the staging area.
 git log # compare commits.
-git log git --graph --oneline  # Shows the graph of commits.
+git log --graph --oneline --decorate  # Shows the graph of commits.
+git log --stat  # extra info. Also other filters can be used.
 git clone # to clone a repo from another machine.
 git add <file> # to add files to the staging area.
 git reset <file>  # to remove a file from the staging area.
 git commit  # For commiting from staging area to the repo.
+git commit -m "<message>"  # Uses message instead of opening an editor.
 git diff   # With no args, compares working dir and staging area.
 git diff id1 id2  # Compares two commits.
 git diff --staged  # Compares the staging area and the repo.
@@ -15,4 +17,11 @@ git checkout -b new_branch  # Creates new branch and check it out.
 # The previous command is equivalent to:
 git branch new_branch
 git checkout new_branch
+
+git branch  # list branches and active one.
+git merge branch1 branch2  # Merges Branch1 and Branch2 (and the Branch checked out).
+git merge branch2  # Equivalent to above, if Branch1 is checked out.
+git show commit_id  # Compares commit_id with its parent.
+git checkout <commit_id> <file>  # Copies the file from the old commit to the staging area. does not chenges the HEAD.
+git revert <commit_id>  # Inserts a new commit that reverts the changes in commit_id.
 
